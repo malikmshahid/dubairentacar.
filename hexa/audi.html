@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="car style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Dubai Rent a car!</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="car style.css">
+    <style>
+        /* Custom CSS for header button position */
+        .header_btn {
+            position: absolute;
+            top: 20px;
+            right: 0;
+        }
+
+        .header_btn.clicked:hover {
+            /* Add styles for the button without the hover effect */
+            /* For example, you can set the background color to red */
+            background-color: transparent !important;
+            border: none;
+        }
+        .header_btn:hover{
+            background-color: transparent!important;
+        }
+        .header_btn:active,
+        .header_btn:focus {
+            box-shadow: none;
+            outline: none;
+            background-color: transparent!important;
+            border: none;
+            /* background-color: transparent; */
+    /* box-shadow: none; */}
+  
+.navbar{ 
+    background-color: #007bff;
+}
+        
+    </style>
+    <style>
+        /* Styles for the preloader */
+        .preloader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* You can set the background color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top of other elements */
+        }
+    
+        .preloader {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+    
+        .spinner {
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            border: 6px solid #007bff; /* You can set the color as needed */
+            border-color: #007bff transparent #007bff transparent;
+            animation: spinner 1.2s linear infinite;
+        }
+    
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader-container">
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg  header_text">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="header_logo" src="assets/images/logo.png" alt="">
+                RENT A CAR
+            </a>
+            <button class="navbar-toggler header_btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars p-1"
+                    style="color: white;border: 1px solid white;border-radius: 3px; position:absolute; top:-10px; right:0;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Cars
+                        </a>
+                        <!-- Additional options using Bootstrap dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="audi.html">Audi</a>
+                            <a class="dropdown-item" href="mercedes.html">Mercedes</a>
+                            <a class="dropdown-item" href="lamborghini.html">Lamborghini</a>
+                            <a class="dropdown-item" href="GM.html">GMC</a>
+                            <a class="dropdown-item" href="mini_cooper.html">Mini Cooper</a>
+                            <a class="dropdown-item" href="range.html">Range Rover</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/audi a3.jpg" class="d-block " alt="..." style="height: 50vh; position:static;">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption d-md-block hero_text">
+                    <h2 class="section-heading text-center mb-4">Audi Specifications</h2>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <header class="audii d-flex pl-5 pr-5">
+        <div>
+        <h1 class="text-light">Car Specifications</h1>
+    </div>
+        <nav>
+            <div>
+            <ul>
+                <li><a href="#audi-a3">Audi A3</a></li>
+                <li><a href="#audi-rsq8">Audi RSQ8</a></li>
+                <li><a href="#audi-q8">Audi Q8</a></li>
+                <li><a href="#audi-a6">Audi A6</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <div class="car-specifications">
+        <div class="container table-container">
+            <section id="audi-a3">
+                <h2 class="mt-4">Audi A3 Specifications</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Engine</td>
+                            <td>2.0-liter turbocharged 4-cylinder engine</td>
+                        </tr>
+                        <tr>
+                            <td>Power Output</td>
+                            <td>220 horsepower (hp)</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td>7-speed S tronic automatic transmission</td>
+                        </tr>
+                        <tr>
+                            <td>Drivetrain</td>
+                            <td>Front-wheel drive (FWD)</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Efficiency</td>
+                            <td>Approximately 25 mpg city / 34 mpg highway</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>
+                                Length: Approximately 4,310 mm (169.7 inches)<br>
+                                Width: Approximately 1,780 mm (70.1 inches)<br>
+                                Height: Approximately 1,420 mm (55.9 inches)<br>
+                                Wheelbase: Approximately 2,595 mm (102.2 inches)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Interior Features</td>
+                            <td>
+                                - Seating Capacity: 5 passengers<br>
+                                - Audi MMI Infotainment System<br>
+                                - Leather seats (depending on trim level)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Safety Features</td>
+                            <td>
+                                - Multiple airbags<br>
+                                - ABS (Anti-lock Braking System)<br>
+                                - Stability control<br>
+                                - Optional driver-assistance technologies
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="container table-container">
+            <section id="audi-rsq8">
+                <h2 class="mt-4">Audi RS Q8 Specifications2</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Engine</td>
+                            <td>4.0-liter twin-turbocharged V8</td>
+                        </tr>
+                        <tr>
+                            <td>Power Output</td>
+                            <td>591 horsepower (hp)</td>
+                        </tr>
+                        <tr>
+                            <td>Torque</td>
+                            <td>590 lb-ft (800 Nm)</td>
+                        </tr>
+                        <tr>
+                            <td>Acceleration (0-60 mph)</td>
+                            <td>3.7 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Top Speed</td>
+                            <td>155 mph (250 km/h) (electronically limited)</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td>8-speed automatic</td>
+                        </tr>
+                        <tr>
+                            <td>Drive</td>
+                            <td>Quattro All-Wheel-Drive</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Economy</td>
+                            <td>Approximately 13 mpg city / 19 mpg highway</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>
+                                Length: Approximately 5,008 mm (197.2 inches)<br>
+                                Width: Approximately 1,999 mm (78.7 inches) (excluding mirrors)<br>
+                                Height: Approximately 1,710 mm (67.3 inches)<br>
+                                Wheelbase: Approximately 2,995 mm (117.9 inches)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Interior Features</td>
+                            <td>
+                                - Seating Capacity: 5 passengers<br>
+                                - Audi Virtual Cockpit Plus<br>
+                                - RS sport seats in Valcona leather with honeycomb stitching
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Safety Features</td>
+                            <td>
+                                - Multiple airbags<br>
+                                - ABS (Anti-lock Braking System)<br>
+                                - Audi Pre Sense City and Audi Pre Sense Rear<br>
+                                - Optional driver-assistance technologies (adaptive cruise control, lane departure
+                                warning,
+                                etc.)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="container table-container">
+            <section id="audi-q8">
+                <h2 class="mt-4">Audi Q8 Specifications</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Engine</td>
+                            <td>3.0-liter turbocharged V6</td>
+                        </tr>
+                        <tr>
+                            <td>Power Output</td>
+                            <td>335 horsepower (hp)</td>
+                        </tr>
+                        <tr>
+                            <td>Torque</td>
+                            <td>369 lb-ft (500 Nm)</td>
+                        </tr>
+                        <tr>
+                            <td>Acceleration (0-60 mph)</td>
+                            <td>5.6 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Top Speed</td>
+                            <td>130 mph (209 km/h) (electronically limited)</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td>8-speed automatic</td>
+                        </tr>
+                        <tr>
+                            <td>Drive</td>
+                            <td>Quattro All-Wheel-Drive</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel Economy</td>
+                            <td>Approximately 17 mpg city / 22 mpg highway</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>
+                                Length: Approximately 4,986 mm (196.3 inches)<br>
+                                Width: Approximately 1,995 mm (78.5 inches) (excluding mirrors)<br>
+                                Height: Approximately 1,705 mm (67.1 inches)<br>
+                                Wheelbase: Approximately 2,995 mm (117.9 inches)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Interior Features</td>
+                            <td>
+                                - Seating Capacity: 5 passengers<br>
+                                - Audi Virtual Cockpit<br>
+                                - Leather seats (depending on trim level)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Safety Features</td>
+                            <td>
+                                - Multiple airbags<br>
+                                - ABS (Anti-lock Braking System)<br>
+                                - Audi Pre Sense City and Audi Pre Sense Rear<br>
+                                - Optional driver-assistance technologies (adaptive cruise control, lane departure
+                                warning,
+                                etc.)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="container table-container mb-5">
+            <section id="audi-a6">
+                <h2 class="mt-4">Audi A6 Specifications</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Make & Model</td>
+                            <td>Audi A6</td>
+                        </tr>
+                        <tr>
+                            <td>Body Type</td>
+                            <td>Sedan</td>
+                        </tr>
+                        <tr>
+                            <td>Seating Capacity</td>
+                            <td>5 passengers</td>
+                        </tr>
+                        <tr>
+                            <td>Engine Options</td>
+                            <td>
+                                <ul>
+                                    <li>2.0-liter 4-cylinder turbocharged engine (standard)</li>
+                                    <li>3.0-liter V6 engine (available in higher trims)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>
+                                <ul>
+                                    <li>2.0-liter engine: Approximately 248 horsepower</li>
+                                    <li>3.0-liter engine: Approximately 335 horsepower</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Torque</td>
+                            <td>
+                                <ul>
+                                    <li>2.0-liter engine: Approximately 273 lb-ft</li>
+                                    <li>3.0-liter engine: Approximately 369 lb-ft</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td>
+                                <ul>
+                                    <li>7-speed dual-clutch automatic (standard)</li>
+                                    <li>8-speed automatic (available in higher trims)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Drive Type</td>
+                            <td>
+                                <ul>
+                                    <li>Front-Wheel Drive (FWD)</li>
+                                    <li>Quattro® All-Wheel Drive (AWD)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0-60 mph (0-97 km/h)</td>
+                            <td>
+                                <ul>
+                                    <li>2.0-liter engine: Approximately 6.1 seconds</li>
+                                    <li>3.0-liter engine: Approximately 5.1 seconds</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Top Speed</td>
+                            <td>Approximately 130 to 155 mph (209 to 250 km/h, electronically limited)</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+    <div class="container-fluid mb-5">
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-start">
+            <a href="index.html" type="button" class="btn btn-success ml-5">Last Page</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+            <a href="GM.html" type="button" class="btn btn-success mr-5">Next Page</a>
+        </div>
+    </div>
+</div>
+    
+    <footer class="footer" id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 00970543214725</p>
+                    <p>Email: info@rentacardubai.com</p>
+                    <p>Address: Dxb trminal 1, Dubai, UAE</p>
+                    <iframe width="350" height="250" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9033.20827632594!2d55.35297163129561!3d25.248737628835013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDXB%20Terminal%201!5e0!3m2!1sen!2suk!4v1627273526931!5m2!1sen!2suk">
+                    </iframe>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <a href="index.html" class="d-block mb-2 footer_anchors">Home</a>
+                        <a href="About Us.html" class="d-block mb-2">About Us</a>
+                        <a href="index.html" class="d-block mb-2">Rates</a>
+                        <a href="audi.html" class="d-block mb-2">Cars</a>
+                        <a href="contact.html" class="d-block mb-2">Contact Us</a>
+                        <a href="privacy.html" class="d-block mb-2">Terms and Conditions</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100094974506950&mibextid=9R9pXO" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                                                <a href="mailto:dubaicarrent936@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/dubai_rent_a_Car84/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- Add more social icons here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2023 Rent a Car Dubai. All rights reserved.</p>
+
+                </div>
+                <a href="#" type="button" class="btn btn-success p-3 ml-auto "><i class="fa fa-arrow-up "></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+        <script>
+            // Hide the preloader when the page has fully loaded
+            window.addEventListener('load', function() {
+                const preloaderContainer = document.querySelector('.preloader-container');
+                preloaderContainer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Show scrollbars after preloading
+            });
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="car style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Dubai Rent a car! </title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="car style.css">
+
+    <style>
+        /* Custom CSS for header button position */
+        .header_btn {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+
+        .header_btn.clicked:hover {
+            /* Add styles for the button without the hover effect */
+            /* For example, you can set the background color to red */
+            background-color: transparent !important;
+            border: none;
+        }
+
+        .header_btn:hover {
+            background-color: transparent;
+        }
+
+        .header_btn:active,
+        .header_btn:focus {
+            box-shadow: none;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            /* background-color: transparent; */
+            /* box-shadow: none; */
+
+        }
+     
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            background-color: #25D366;
+            padding: 20px;
+            text-align: center;
+        }
+        .main-heading{
+            padding-top: 100px;
+            padding-bottom: 40px;
+            font-weight: 800;
+        }
+        .header h1 {
+            color: white;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        /* Main Content Container */
+        .cointainer {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Sub-heading */
+        .sub-heading {
+            color: #25D366;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph and Important Text */
+        .paragraph {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .important-text {
+            color: #25D366;
+            font-weight: bold;
+        }
+
+        /* List Items */
+        .list {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .list-item {
+            margin-bottom: 5px;
+        }
+   
+    </style>
+      <style>
+        /* Styles for the preloader */
+        .preloader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* You can set the background color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top of other elements */
+        }
+
+        .preloader {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .spinner {
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            border: 6px solid #25D366; /* You can set the color as needed */
+            border-color: #25D366 transparent #25D366 transparent;
+            animation: spinner 1.2s linear infinite;
+        }
+
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="preloader-container">
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark nav-dark header_text">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="header_logo" src="assets/images/logo.png" alt="">
+                RENT A CAR
+            </a>
+            <button class="navbar-toggler header_btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars p-1"
+                    style="font-size: 30px; color: white;border: 1px solid white;border-radius: 3px; position:absolute; top:-10px; right:0;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Cars
+                        </a>
+                        <!-- Additional options using Bootstrap dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="audi.html">Audi</a>
+                            <a class="dropdown-item" href="mercedes.html">Mercedes</a>
+                            <a class="dropdown-item" href="lamborghini.html">Lamborghini</a>
+                            <a class="dropdown-item" href="GM.html">GMC</a>
+                            <a class="dropdown-item" href="mini_cooper.html">Mini Cooper</a>
+                            <a class="dropdown-item" href="range.html">Range Rover</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="header">
+        <h1 class="main-heading">Terms and Conditions</h1>
+    </div>
+    <div class="containr cointainer">
+        <h2 class="sub-heading">Rent a Car Agreement</h2>
+        <p class="paragraph">By renting a car from Dubai Rent a Car, you agree to the following <span
+                class="important-text">terms and conditions:</span></p>
+        <ol class="list">
+            <li class="list-item">You must pay the rent of the car for a minimum of two days, regardless of how long you
+                actually use the car.</li>
+            <li class="list-item">A refundable deposit must be made before taking the car on rent. The amount of the
+                deposit will vary based on the type of car and rental duration.</li>
+            <li class="list-item">You must be at least 21 years old and possess a valid driver's license to rent a car.
+            </li>
+            <!-- <li>Insurance coverage is provided for the car, but you are responsible for any damages or accidents that
+                occur during the rental period.</li> -->
+            <li>The car should be returned in the same condition it was rented, and any damages or excessive cleaning
+                may result in additional charges.</li>
+            <li>The rental period begins and ends at the times specified in the rental agreement. Late returns may incur
+                extra charges.</li>
+            <!-- <li>Smoking is strictly prohibited in all rental vehicles.</li> -->
+            <li>No off-road driving is allowed with the rental vehicles.</li>
+            <!-- <li>The maximum number of passengers allowed in the car must not exceed the specified limit.</li>
+            <li>The car should be refueled to the same level as it was at the start of the rental period. Otherwise,
+                refueling charges will apply.</li> -->
+            <li>You are responsible for all traffic and parking violations incurred during the rental period.</li>
+            <li>Any extensions to the rental period must be agreed upon and paid for in advance.</li>
+            <!-- <li>Dubai Rent a Car reserves the right to refuse rental to any individual who does not meet the rental
+                requirements or poses a risk.</li> -->
+            <li>Payment for the rental must be made in full before the rental period begins.</li>
+            <li>In the event of a breakdown or accident, you must inform Dubai Rent a Car immediately and follow the
+                provided instructions.</li>
+
+        </ol>
+        <p class="paragraph">Please read these <span class="important-text">terms and conditions</span> carefully before
+            proceeding with your car rental. By signing the rental agreement, you acknowledge and agree to abide by all
+            the terms and conditions stated herein.</p>
+    </div>
+
+    <footer class="footer" id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 00970543214725</p>
+                    <p>Email: info@rentacardubai.com</p>
+                    <p>Address: Dxb trminal 1, Dubai, UAE</p>
+                    <iframe width="350" height="250" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9033.20827632594!2d55.35297163129561!3d25.248737628835013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDXB%20Terminal%201!5e0!3m2!1sen!2suk!4v1627273526931!5m2!1sen!2suk">
+                    </iframe>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <a href="index.html" class="d-block mb-2 footer_anchors">Home</a>
+                        <a href="About Us.html" class="d-block mb-2">About Us</a>
+                        <a href="index.html" class="d-block mb-2">Rates</a>
+                        <a href="audi.html" class="d-block mb-2">Cars</a>
+                        <a href="contact.html" class="d-block mb-2">Contact Us</a>
+                        <a href="privacy.html" class="d-block mb-2">Terms and Conditions</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100094974506950&mibextid=9R9pXO" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                                                <a href="mailto:dubaicarrent936@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/dubai_rent_a_Car84/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- Add more social icons here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2023 Rent a Car Dubai. All rights reserved.</p>
+
+                </div>
+                <a href="#" type="button" class="btn btn-success p-3 ml-auto "><i class="fa fa-arrow-up "></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+        <script>
+            // Hide the preloader when the page has fully loaded
+            window.addEventListener('load', function() {
+                const preloaderContainer = document.querySelector('.preloader-container');
+                preloaderContainer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Show scrollbars after preloading
+            });
+        </script>
+
+
+</body>
+
+</html>

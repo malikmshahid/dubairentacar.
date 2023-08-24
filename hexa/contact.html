@@ -1,0 +1,340 @@
+
+ <!doctype html>
+ <html lang="en">
+ 
+ <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     <link rel="stylesheet" href="car style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+     <title>Dubai Rent a car!</title>
+     <link rel="icon" href="assets/images/logo.png">
+     <link rel="stylesheet" href="car style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .header_btn {
+            position: absolute;
+            top: 0;
+            right: 20px;
+        }
+
+        .header_btn.clicked:hover {
+            /* Add styles for the button without the hover effect */
+            /* For example, you can set the background color to red */
+            background-color: transparent !important;
+            border: none;
+        }
+        .header_btn:hover{
+            background-color: transparent;
+        }
+        .header_btn:active,
+        .header_btn:focus {
+            box-shadow: none;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            /* background-color: transparent; */
+    /* box-shadow: none; */
+
+        }
+        
+        #header {
+            background-color: #25D366;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            padding-top: 70px;
+        }
+        #container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        .whatsapp-icon {
+            color: #25D366; /* WhatsApp green color */
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #25D366;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #128C7E; /* Slightly darker shade on hover */
+        }
+
+        .whatsapp-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .whatsapp-link i {
+            margin-right: 5px;
+        }
+
+        .whatsapp-link:hover {
+            color: #25D366;
+        }
+    </style>
+    <style>
+        /* Styles for the preloader */
+        .preloader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* You can set the background color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top of other elements */
+        }
+    
+        .preloader {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+    
+        .spinner {
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            border: 6px solid #333; /* You can set the color as needed */
+            border-color: #333 transparent #333 transparent;
+            animation: spinner 1.2s linear infinite;
+        }
+    
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader-container">
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark nav-dark header_text">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="header_logo" src="assets/images/logo.png" alt="">
+                RENT A CAR
+            </a>
+            <button class="navbar-toggler header_btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars p-1" style="font-size: 30px; color: white;border: 1px solid white;border-radius: 3px; position:absolute; top:-10px; right:0;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Cars
+                        </a>
+                        <!-- Additional options using Bootstrap dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="audi.html">Audi</a>
+                            <a class="dropdown-item" href="mercedes.html">Mercedes</a>
+                            <a class="dropdown-item" href="lamborghini.html">Lamborghini</a>
+                            <a class="dropdown-item" href="GM.html">GMC</a>
+                            <a class="dropdown-item" href="mini_cooper.html">Mini Cooper</a>
+                            <a class="dropdown-item" href="range.html">Range Rover</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="header">
+        <h1 class="text-light">Contact Us</h1>
+        <p>We'd love to hear from you! Please feel free to get in touch with us using the form below.</p>
+    </div>
+
+    <div id="container">
+        <h1>Contact Us</h1>
+        <form onsubmit="sendWhatsAppMessage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- WhatsApp icon linking to the WhatsApp chat  -->
+        <a class="whatsapp-link" href="#" onclick="sendWhatsAppMessage(event)">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>Chat with us on WhatsApp
+        </a>
+    </div>
+
+
+    <footer class="footer" id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 00970543214725</p>
+                    <p>Email: info@rentacardubai.com</p>
+                    <p>Address: Dxb trminal 1, Dubai, UAE</p>
+                    <iframe width="300" height="200" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9033.20827632594!2d55.35297163129561!3d25.248737628835013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDXB%20Terminal%201!5e0!3m2!1sen!2suk!4v1627273526931!5m2!1sen!2suk">
+                    </iframe>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <a href="index.html" class="d-block mb-2 footer_anchors">Home</a>
+                        <a href="About Us.html" class="d-block mb-2">About Us</a>
+                        <a href="index.html" class="d-block mb-2">Rates</a>
+                        <a href="audi.html" class="d-block mb-2">Cars</a>
+                        <a href="contact.html" class="d-block mb-2">Contact Us</a>
+                        <a href="privacy.html" class="d-block mb-2">Terms and Conditions</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100094974506950&mibextid=9R9pXO" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                                                <a href="mailto:dubaicarrent936@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/dubai_rent_a_Car84/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- Add more social icons here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2023 Rent a Car Dubai. All rights reserved.</p>
+
+                </div>
+                <a href="#" type="button" class="btn btn-success p-3 ml-auto "><i class="fa fa-arrow-up "></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--    Add Font Awesome library for the WhatsApp icon  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            const name = encodeURIComponent(document.getElementById('name').value);
+            const email = encodeURIComponent(document.getElementById('email').value);
+            const message = encodeURIComponent(document.getElementById('message').value);
+            const phone = '00971509895032'; // Replace with your phone number
+        
+            // Create the WhatsApp link with the encoded message
+            const whatsappLink = `https://wa.me/${phone}?text=Name:${name}%0AEmail:${email}%0AMessage:${message}`;
+        
+            // Open the WhatsApp link in a new tab
+            window.open(whatsappLink, '_blank');
+        
+            // Reset the form after sending the message
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        
+            // Reload the page after a short delay (3 seconds in this case)
+            setTimeout(() => {
+                location.reload();
+            }, 3000); // 3000 milliseconds = 3 seconds (Adjust the timing as per your preference)
+        }
+        </script>
+        
+       <script>
+        // Hide the preloader when the page has fully loaded
+        window.addEventListener('load', function() {
+            const preloaderContainer = document.querySelector('.preloader-container');
+            preloaderContainer.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Show scrollbars after preloading
+        });
+    </script>
+
+
+</body>
+</html> 

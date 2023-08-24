@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="car style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Dubai Rent a car!</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="car style.css">
+ 
+    <style>
+        /* Custom CSS for header button position */
+        .header_btn {
+            position: absolute;
+            top: 20px;
+            right: 0;
+        }
+
+        .header_btn.clicked:hover {
+            /* Add styles for the button without the hover effect */
+            /* For example, you can set the background color to red */
+            background-color: transparent !important;
+            border: none;
+        }
+        .header_btn:hover{
+            background-color: transparent!important;
+        }
+        .header_btn:active,
+        .header_btn:focus {
+            box-shadow: none;
+            outline: none;
+            background-color: transparent!important;
+            border: none;
+            /* background-color: transparent; */
+    /* box-shadow: none; */}
+  
+.navbar{ 
+    background-color: #007bff;
+}
+        
+    </style>
+
+
+    <style>
+        /* Body style to add a light background color */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1; /* Add a light background color */
+        }
+
+        /* Table container styling */
+        .table-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px auto; /* Center the container horizontally */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px; /* Adjust the max-width as per your preference */
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .table ul li{
+            list-style: none;
+        }
+        h2 .mt-4{
+            width: 100%;
+            background-color:#007bff ;
+        }
+    </style>
+    <style>
+        /* Styles for the preloader */
+        .preloader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* You can set the background color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top of other elements */
+        }
+    
+        .preloader {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+    
+        .spinner {
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            border: 6px solid #333; /* You can set the color as needed */
+            border-color: #333 transparent #333 transparent;
+            animation: spinner 1.2s linear infinite;
+        }
+    
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+  
+</head>
+
+<body>
+    <div class="preloader-container">
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg  header_text">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="header_logo" src="assets/images/logo.png" alt="">
+                RENT A CAR
+            </a>
+            <button class="navbar-toggler header_btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars p-1"
+                    style="color: white;border: 1px solid white;border-radius: 3px; position:absolute; top:-10px; right:0;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Cars
+                        </a>
+                        <!-- Additional options using Bootstrap dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="audi.html">Audi</a>
+                            <a class="dropdown-item" href="mercedes.html">Mercedes</a>
+                            <a class="dropdown-item" href="lamborghini.html">Lamborghini</a>
+                            <a class="dropdown-item" href="GM.html">GMC</a>
+                            <a class="dropdown-item" href="mini_cooper.html">Mini Cooper</a>
+                            <a class="dropdown-item" href="range.html">Range Rover</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/mercedes g63.jpg" class="d-block " alt="..." style="height: 50vh; position:static;">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption d-md-block hero_text">
+                    <h2 class="section-heading text-center mb-4">Mercedes Specifications</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="d-flex audii">
+        <h1 class="text-light">Car Specifications</h1>
+        <nav>
+            <ul style="font-size: 14px;">
+                <li><a href="#A220">Mercedes A220</a></li>
+                <li><a href="#c-300">Mercedes C300</a></li>
+                <li><a href="#g-63">Mercedes G63</a></li>
+                <li><a href="#Gle">Mercedes GLE</a></li>
+                <li><a href="#S_class">Mercedes S_class</a></li>
+                <li><a href="#C300_c">Mercedes C300 Convertable</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="car-specifications">
+    <div class="container table-container">
+        <section id="A220"></section>
+        <h2 class="mt-4">Mercedes A220 Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Mercedes A220</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>Sedan</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>5 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>2.0-liter turbocharged 4-cylinder</td>
+                </tr>
+                <tr>
+                    <td>Power Output</td>
+                    <td>188 horsepower</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>7-speed dual-clutch automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Front-Wheel Drive (FWD)</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 7.1 seconds</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Approximately 130 mph (209 km/h)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>Approximately 30 mpg</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 179 inches (4,549 mm)</li>
+                            <li>Width: Approximately 71 inches (1,796 mm)</li>
+                            <li>Height: Approximately 56 inches (1,433 mm)</li>
+                            <li>Wheelbase: Approximately 107 inches (2,729 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>MB-Tex Upholstery</li>
+                            <li>10.25-inch Touchscreen Infotainment System</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                            <li>Dual-Zone Automatic Climate Control</li>
+                            <li>Power-Adjustable Front Seats</li>
+                            <li>Panoramic Sunroof</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>ATTENTION ASSIST®</li>
+                            <li>Active Brake Assist</li>
+                            <li>Blind Spot Assist</li>
+                            <li>Adaptive Cruise Control</li>
+                            <li>Rearview Camera</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>LED Headlights and Taillights</li>
+                            <li>17-inch Alloy Wheels</li>
+                            <li>Keyless Entry and Push-Button Start</li>
+                            <li>Wireless Charging Pad</li>
+                            <li>MBUX Voice Control System</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container table-container">
+        <section id="c-300"></section>
+        <h2 class="mt-4">Mercedes C300 Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Mercedes C300</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>Sedan</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>5 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>2.0-liter turbocharged 4-cylinder</td>
+                </tr>
+                <tr>
+                    <td>Power Output</td>
+                    <td>255 horsepower</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>9-speed automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive (RWD)</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 5.7 seconds</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Approximately 130 mph (209 km/h)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>Approximately 25 mpg</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 185 inches (4,686 mm)</li>
+                            <li>Width: Approximately 71 inches (1,798 mm)</li>
+                            <li>Height: Approximately 57 inches (1,443 mm)</li>
+                            <li>Wheelbase: Approximately 111 inches (2,819 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>MB-Tex Upholstery</li>
+                            <li>10.25-inch Touchscreen Infotainment System</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                            <li>Dual-Zone Automatic Climate Control</li>
+                            <li>Power-Adjustable Front Seats with Memory</li>
+                            <li>Panoramic Sunroof</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>ATTENTION ASSIST®</li>
+                            <li>Active Brake Assist</li>
+                            <li>Blind Spot Assist</li>
+                            <li>Adaptive Cruise Control</li>
+                            <li>Rearview Camera</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>LED Headlights and Taillights</li>
+                            <li>18-inch Alloy Wheels</li>
+                            <li>Keyless Entry and Push-Button Start</li>
+                            <li>Wireless Charging Pad</li>
+                            <li>MBUX Voice Control System</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container table-container">
+        <section id="g-63">
+        <h2 class="mt-4">Mercedes G63 AMG Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Mercedes G63 AMG</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>SUV</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>5 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>4.0-liter twin-turbocharged V8</td>
+                </tr>
+                <tr>
+                    <td>Power Output</td>
+                    <td>577 horsepower</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>9-speed automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>All-Wheel Drive (AWD)</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 4.5 seconds</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Approximately 149 mph (239 km/h)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>Approximately 14 mpg</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 190 inches (4,827 mm)</li>
+                            <li>Width: Approximately 76 inches (1,938 mm) (excluding mirrors)</li>
+                            <li>Height: Approximately 77 inches (1,962 mm)</li>
+                            <li>Wheelbase: Approximately 113 inches (2,872 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>AMG Nappa Leather Upholstery</li>
+                            <li>12.3-inch Digital Instrument Cluster</li>
+                            <li>12.3-inch Touchscreen Infotainment System</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                            <li>3-Zone Automatic Climate Control</li>
+                            <li>Heated and Ventilated Front Seats</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>Blind Spot Assist</li>
+                            <li>Active Lane Keeping Assist</li>
+                            <li>Active Brake Assist</li>
+                            <li>Surround View Camera System</li>
+                            <li>Adaptive Cruise Control</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>Panoramic Sunroof</li>
+                            <li>AMG Performance Exhaust System</li>
+                            <li>22-inch AMG Wheels</li>
+                            <li>Designo Exterior and Interior Options (customization)</li>
+                            <li>AMG Ride Control Sports Suspension</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    </div>
+    <div class="container table-container">
+        <section id="Gle">
+        <h2 class="mt-4">Mercedes GLE Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Mercedes GLE</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>SUV</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>5 to 7 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine Options</td>
+                    <td>
+                        <ul>
+                            <li>2.0-liter turbocharged 4-cylinder (255 horsepower)</li>
+                            <li>3.0-liter turbocharged inline-6 (429 horsepower)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>9-speed automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>All-Wheel Drive (AWD)</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 5.2 seconds (with 3.0L engine)</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Approximately 130 mph (209 km/h)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>Approximately 21 mpg (with 3.0L engine)</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 194 inches (4,921 mm)</li>
+                            <li>Width: Approximately 76 inches (1,929 mm) (excluding mirrors)</li>
+                            <li>Height: Approximately 71 inches (1,796 mm)</li>
+                            <li>Wheelbase: Approximately 117 inches (2,995 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>MB-Tex Upholstery</li>
+                            <li>12.3-inch Digital Instrument Cluster</li>
+                            <li>12.3-inch Touchscreen Infotainment System</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                            <li>3-Zone Automatic Climate Control</li>
+                            <li>Heated Front Seats</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>Blind Spot Assist</li>
+                            <li>Active Lane Keeping Assist</li>
+                            <li>Active Brake Assist</li>
+                            <li>Surround View Camera System</li>
+                            <li>Adaptive Cruise Control</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>Panoramic Sunroof</li>
+                            <li>LED Headlights and Taillights</li>
+                            <li>Power Liftgate</li>
+                            <li>Wireless Charging Pad</li>
+                            <li>AirMatic® Suspension (with 3.0L engine)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    </div>
+    <div class="container table-container">
+        <section id="S_class">
+        <h2 class="mt-4">Mercedes S-Class Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Mercedes S-Class</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>Sedan</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>4 to 5 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine Options</td>
+                    <td>
+                        <ul>
+                            <li>3.0-liter V6</li>
+                            <li>4.0-liter V8</li>
+                            <li>6.0-liter V12</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>9-speed automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive / All-Wheel Drive</td>
+                </tr>
+                <tr>
+                    <td>Horsepower</td>
+                    <td>From 362 to 621 HP</td>
+                </tr>
+                <tr>
+                    <td>Torque</td>
+                    <td>From 369 to 738 lb-ft</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 4.4 to 7.0 seconds (depending on the engine)</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Approximately 130 to 155 mph (209 to 250 km/h, electronically limited)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>From 17 to 24 MPG (13.8 to 9.8 L/100km, depending on the engine)</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 206 inches (5,179 mm)</li>
+                            <li>Width: Approximately 75 inches (1,900 mm) (excluding mirrors)</li>
+                            <li>Height: Approximately 59 inches (1,496 mm)</li>
+                            <li>Wheelbase: Approximately 124 inches (3,149 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>Leather Seats</li>
+                            <li>Heated and Ventilated Seats</li>
+                            <li>Massage Seats</li>
+                            <li>12.3-inch Digital Instrument Cluster</li>
+                            <li>12.8-inch OLED Touchscreen Infotainment System</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                            <li>4-Zone Automatic Climate Control</li>
+                            <li>Burmester® High-End 3D Surround Sound System</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>Blind Spot Assist</li>
+                            <li>Active Lane Keeping Assist</li>
+                            <li>Active Brake Assist</li>
+                            <li>360-degree Surround View Camera System</li>
+                            <li>Adaptive Cruise Control</li>
+                            <li>Night Vision Assist</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>Panoramic Sunroof</li>
+                            <li>LED Headlights and Taillights</li>
+                            <li>AIRMATIC® Air Suspension</li>
+                            <li>Magic Body Control®</li>
+                            <li>ENERGIZING Comfort Control</li>
+                            <li>MBUX Interior Assistant (Gesture Control)</li>
+                            <li>Executive Rear Seat Package Plus</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    </div>
+    <div class="container table-container">
+        <section id="C300_c">
+        <h2 class="mt-4">Mercedes C300 Convertible Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Mercedes C300 Convertible 700</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>Convertible</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>4 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>
+                        4.0-liter Turbocharged V8
+                    </td>
+                </tr>
+                <tr>
+                    <td>Power</td>
+                    <td>700 horsepower</td>
+                </tr>
+                <tr>
+                    <td>Torque</td>
+                    <td>TBD lb-ft</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>9-speed automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 3.5 seconds</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Approximately 190 mph (305 km/h)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>TBD mpg</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: 4686mm</li>
+                            <li>Width: 2016mm</li>
+                            <li>Height: 1409mm</li>
+                            <li>Wheelbase: 2840mm</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>Leather Upholstery</li>
+                            <li>10.25-inch Digital Instrument Cluster</li>
+                            <li>10.25-inch Touchscreen Infotainment System</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                            <li>Dual-Zone Automatic Climate Control</li>
+                            <li>Heated and Ventilated Front Seats</li>
+                            <li>Airscarf Neck-Level Heating</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>Electronic Stability Control</li>
+                            <li>Adaptive Cruise Control</li>
+                            <li>Blind Spot Assist</li>
+                            <li>Lane Keeping Assist</li>
+                            <li>360-degree Surround View Camera System</li>
+                            <li>Automated Emergency Braking</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>Retractable Soft Top</li>
+                            <li>LED Headlights and Taillights</li>
+                            <li>AIRMATIC® Air Suspension</li>
+                            <li>MAGIC VISION CONTROL®</li>
+                            <li>Optional Burmester® Surround Sound System</li>
+                            <li>Optional Driver Assistance Package</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    </div>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-start">
+                <a href="mini_cooper.html" type="button" class="btn btn-success ml-5">Last Page</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <a href="lamborghini.html" type="button" class="btn btn-success mr-5">Next Page</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 00970543214725</p>
+                    <p>Email: info@rentacardubai.com</p>
+                    <p>Address: Dxb trminal 1, Dubai, UAE</p>
+                    <iframe
+                    width="350"
+                    height="250"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9033.20827632594!2d55.35297163129561!3d25.248737628835013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDXB%20Terminal%201!5e0!3m2!1sen!2suk!4v1627273526931!5m2!1sen!2suk">
+                </iframe>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <a href="index.html" class="d-block mb-2 footer_anchors">Home</a>
+                        <a href="About Us.html" class="d-block mb-2">About Us</a>
+                        <a href="index.html" class="d-block mb-2">Rates</a>
+                        <a href="audi.html" class="d-block mb-2">Cars</a>
+                        <a href="contact.html" class="d-block mb-2">Contact Us</a>
+                        <a href="privacy.html" class="d-block mb-2">Terms and Conditions</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100094974506950&mibextid=9R9pXO" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                                                <a href="mailto:dubaicarrent936@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/dubai_rent_a_Car84/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- Add more social icons here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2023 Rent a Car Dubai. All rights reserved.</p>
+
+                </div>
+                <a href="#" type="button" class="btn btn-success p-3 ml-auto "><i class="fa fa-arrow-up "></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+        <script>
+            // Hide the preloader when the page has fully loaded
+            window.addEventListener('load', function() {
+                const preloaderContainer = document.querySelector('.preloader-container');
+                preloaderContainer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Show scrollbars after preloading
+            });
+        </script>
+
+</body>
+</html>

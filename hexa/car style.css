@@ -1,0 +1,423 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header_logo {
+    /* height: 60px; */
+    width: 6%;
+    /* object-fit: cover; */
+    border-radius: 50%;
+}
+
+.nav-link:hover {
+    color: #e67e22 !important;
+    border-bottom: 2px solid #e67e22;
+    line-height: 28px;
+}
+
+.navbar-brand:hover {
+    color: #e67e22 !important;
+}
+
+/* Add CSS styles for transparent overlay */
+.header_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.navbar-brand {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 18px;
+    padding-left: 10px !important;
+    font-weight: 500;
+}
+
+.navbar-scrolled {
+    background-color: #828381;
+    /* Change to your desired background color on scroll */
+}
+
+
+/* Custom CSS to adjust carousel text position and height */
+.hero_text {
+    position: absolute;
+    top: 55%;
+    left: 50%!important;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.hero_text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero_text p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero_text h4 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Adjust carousel height */
+.hero-height {
+    height: 100vh;
+    /* Set your desired height */
+}
+
+/* Add transparent black color overlay */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.car-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer h3 {
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #e67e22;
+}
+
+/* Social Icons */
+.footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+    color: #e67e22;
+}
+
+.jumbotron-bg {
+    position: relative;
+    background-image: url("assets/images/mercedes\ a220.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    /* Set your desired height */
+
+    /* Add transparent black color overlay */
+    background-color: rgba(0, 0, 0, 0.787);
+}
+
+/* Add styling for the text inside the jumbotron */
+.jumbotron-bg .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    /* Set text color */
+}
+
+.jumbotron-bg h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.jumbotron-bg p {
+    font-size: 24px;
+}
+
+.footer_anchors {
+    width: auto !important;
+}
+
+@media screen and (max-width:600px) {
+    .hero_text h1 {
+        font-size: 20px;
+        top: 15%;
+        position: absolute;
+    }
+
+    .hero_text h4 {
+        font-size: 18px;
+        position: absolute;
+        top: 70%;
+        /* line-height: 30px; */
+    }
+
+    .hero_text p {
+        font-size: 20px;
+        display: none;
+        /* position: absolute; */
+        /* top: 7%; */
+    }
+    .audii h1{
+        font-size: 10px;
+    }
+    .audii ul li a{
+        font-size: 10px;
+    }
+    .carousel-item{
+        height: 50vh;
+    }
+    /* .hero-text{
+        top: 5%;
+    } */
+}
+@media screen and (max-width:1000px) {
+   
+}
+
+.about_text{
+    font-size: 18px;
+    font-weight: 500;
+}
+.section-heading{
+    font-weight: 800;
+    font-size: 40px;
+}
+.card {
+    position: relative;
+}
+
+.img1{
+    /* position: absolute;  */
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: auto;
+}
+.img1 {
+    z-index: 1; /* Set a lower z-index for the first image (default is 0) */
+}
+
+.img2 {
+    position: absolute;
+    /* top: 0; */
+    left: -64px;
+    width: 100%;
+    height: 250px;
+    z-index: 2;
+    top: 49%;
+    object-fit: none;
+    /* Set a higher z-index for the second image */
+}
+
+/* 
+body {
+    background-color: #f7f9f8;
+    color: #333;
+} */
+
+/* .container {
+    padding-top: 30px;
+    padding-bottom: 50px; 
+}*/
+
+/* Icons and text spacing */
+.service-item {
+    margin-bottom: 20px; /* Increase the distance between icons and text */
+}
+
+/* Style the icons */
+.service-icon {
+    color: #25D366; /* Brighter green color for the icons */
+    font-size: 30px;
+    margin-right: 10px; /* Adjust the distance between icons and text */
+}
+
+/* Style the headings */
+.main-heading2 {
+    font-size: 42px; /* Increase the font size for the main heading */
+    color: #25D366; /* Brighter green color for the main heading */
+    margin-bottom: 30px; /* Add some space below the main heading */
+}
+
+/* Style the "Contact Us to Book Now" button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25D366; /* Brighter green color for the button */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #89ec73; /* Darker shade of green on hover for a subtle shine */
+    text-decoration: none;
+
+}
+.service-icon:hover {
+    color: #31ff07; /* New shade of green on hover for a contrasting effect */
+    transform: scale(1.2); /* Scale the icon to 120% on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+/* Hide dropdown items by default */
+.dropdown-menu {
+display: none;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+background-color: #007bff;
+border: none;
+border-radius: 5px;
+padding: 10px 0;
+}
+
+.dropdown-item {
+color: #fff;
+font-size: 16px;
+padding: 10px 20px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+background-color: #0056b3; /* Darker shade of blue on hover */
+border-radius: 5px;
+}
+.audii{
+    width: 100%;
+    background-color: #007bff;
+
+}
+
+
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #007bff;
+padding: 10px;
+height: 60px;
+}
+
+header h1 {
+color: #fff;
+margin: 0;
+font-size: 24px;
+}
+
+header nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+header nav li {
+margin-left: 20px;
+}
+
+header nav a {
+text-decoration: none;
+color: #fff;
+font-size: 18px;
+font-weight: 600;
+}
+
+header nav a:hover {
+text-decoration: underline;
+color: #ffcc00;
+}
+/* Body style to add a light background color */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1; /* Add a light background color */
+}
+
+/* Table container styling */
+.table-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto; /* Center the container horizontally */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Adjust the max-width as per your preference */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+.table ul li{
+    list-style: none;
+}
+h2 .mt-4{
+    width: 100%;
+    background-color:#007bff ;
+}
+

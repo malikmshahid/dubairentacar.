@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="car style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Dubai Rent a car!</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="car style.css">
+    <style>
+        /* Styles for the preloader */
+        .preloader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* You can set the background color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top of other elements */
+        }
+    
+        .preloader {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+    
+        .spinner {
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            border: 6px solid #333; /* You can set the color as needed */
+            border-color: #333 transparent #333 transparent;
+            animation: spinner 1.2s linear infinite;
+        }
+    
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader-container">
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg  header_text" style="background-color: #007bff;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="header_logo" src="assets/images/logo.png" alt="">
+                RENT A CAR</a>
+            <button class="navbar-toggler header_btn" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars p-2" style="color: white;border: 1px solid white;border-radius: 3px;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Cars
+                        </a>
+                        <!-- Additional options using Bootstrap dropdown -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="audi.html">Audi</a>
+                            <a class="dropdown-item" href="mercedes.html">Mercedes</a>
+                            <a class="dropdown-item" href="lamborghini.html">Lamborghini</a>
+                            <a class="dropdown-item" href="GM.html">GMC</a>
+                            <a class="dropdown-item" href="mini_cooper.html">Mini Cooper</a>
+                            <a class="dropdown-item" href="range.html">Range Rover</a>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/gmc.jpg" class="d-block " alt="..." style="height: 50vh; position:static;">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption d-md-block hero_text">
+                    <h2 class="section-heading text-center mb-4">GMC (Gneral Motors Company)</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="d-flex audii pl-5 pr-5">
+        <h1 class="text-light">Car Specifications</h1>
+        <nav>
+            <ul>
+                <li><a href="#corvette">Chevrolet Corvette</a></li>
+                <li><a href="#Escalade">Cadillac Escalade</a></li>
+                <li><a href="#Yokun">GMC Yokun </a></li>
+                <li><a href="#Ferrari">Ferrari F8</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="car-specifications">
+    <div class="container table-container">
+        <section id="corvette">
+        <h2 class="mt-4">Chevrolet Corvette Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Model</th>
+                    <th>Chevrolet Corvette</th>
+                </tr>
+                <tr>
+                    <td>Engine Options</td>
+                    <td>
+                        <ul>
+                            <li>6.2-liter V8 engine (Stingray)</li>
+                            <li>Power: Approximately 490 horsepower</li>
+                            <li>Torque: Approximately 465 lb-ft</li>
+                        </ul>
+                        <ul>
+                            <li>6.2-liter V8 engine with performance exhaust (Stingray Z51)</li>
+                            <li>Power: Approximately 495 horsepower</li>
+                            <li>Torque: Approximately 470 lb-ft</li>
+                        </ul>
+                        <ul>
+                            <li>6.2-liter V8 engine (Z06)</li>
+                            <li>Power: Approximately 650 horsepower</li>
+                            <li>Torque: Approximately 650 lb-ft</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transmission Options</td>
+                    <td>
+                        <ul>
+                            <li>8-speed dual-clutch automatic transmission (standard on all trims)</li>
+                            <li>A manual transmission option is available for certain models.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive (RWD)</td>
+                </tr>
+                <tr>
+                    <td>Performance (for Stingray Z51 model)</td>
+                    <td>
+                        <ul>
+                            <li>0-60 mph (0-97 km/h): Approximately 2.9 seconds</li>
+                            <li>Top Speed: Over 180 mph (290 km/h)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fuel Economy (Estimated)</td>
+                    <td>The fuel efficiency may vary depending on the engine and driving conditions.</td>
+                </tr>
+            </table>
+        </div>
+        </section>
+    </div>
+    <div class="container table-container">
+        <section id="Escalade">
+
+        <h2 class="mt-4">Cadillac Escalade Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>Cadillac Escalade</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>SUV</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>7 to 8 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine Options</td>
+                    <td>
+                        <ul>
+                            <li>6.2-liter V8 engine</li>
+                            <li>Power: Approximately 420 horsepower</li>
+                            <li>Torque: Approximately 460 lb-ft</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>10-speed automatic transmission</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive (RWD)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Economy (Estimated)</td>
+                    <td>
+                        <ul>
+                            <li>City: Approximately 15 mpg</li>
+                            <li>Highway: Approximately 20 mpg</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 211 inches (5,359 mm)</li>
+                            <li>Width: Approximately 81 inches (2,059 mm)</li>
+                            <li>Height: Approximately 76 inches (1,930 mm)</li>
+                            <li>Wheelbase: Approximately 120 inches (3,048 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>Luxurious leather seats</li>
+                            <li>Tri-zone automatic climate control</li>
+                            <li>Heated and ventilated front seats</li>
+                            <li>Heated second-row seats</li>
+                            <li>Power-folding third-row seats</li>
+                            <li>Infotainment system with touchscreen display</li>
+                            <li>Bose premium audio system</li>
+                            <li>Wireless smartphone charging</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Multiple airbags</li>
+                            <li>Forward Collision Alert</li>
+                            <li>Lane Keep Assist with Lane Departure Warning</li>
+                            <li>Automatic Emergency Braking</li>
+                            <li>Blind Spot Monitor</li>
+                            <li>Rear Cross Traffic Alert</li>
+                            <li>Adaptive Cruise Control</li>
+                            <li>Surround Vision Camera System</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </section>
+    </div>
+    <div class="container table-container">
+        <section id="Yokun">
+
+        <h2 class="mt-4">GMC Yokun Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>GMC Yukon Denali</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>SUV</td>
+                </tr>
+                <tr>
+                    <td>Seating Capacity</td>
+                    <td>7 to 8 passengers</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>6.2-liter V8</td>
+                </tr>
+                <tr>
+                    <td>Power Output</td>
+                    <td>Approximately 420 horsepower</td>
+                </tr>
+                <tr>
+                    <td>Torque</td>
+                    <td>Approximately 460 lb-ft</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>10-speed automatic transmission</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive (RWD) or All-Wheel Drive (AWD)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Estimated)</td>
+                    <td>
+                        <ul>
+                            <li>City: Approximately 15 mpg</li>
+                            <li>Highway: Approximately 20 mpg</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 211 inches (5,359 mm)</li>
+                            <li>Width: Approximately 81 inches (2,059 mm)</li>
+                            <li>Height: Approximately 76 inches (1,930 mm)</li>
+                            <li>Wheelbase: Approximately 120 inches (3,048 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>Leather seats with heating and ventilation</li>
+                            <li>Tri-zone automatic climate control</li>
+                            <li>Heated steering wheel</li>
+                            <li>Bose premium audio system</li>
+                            <li>Wireless smartphone charging</li>
+                            <li>IntelliLink Infotainment System</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>Blind Spot Monitoring</li>
+                            <li>Rear Cross Traffic Alert</li>
+                            <li>Lane Keep Assist with Lane Departure Warning</li>
+                            <li>Adaptive Cruise Control</li>
+                            <li>Surround Vision Camera System</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Towing Capacity</td>
+                    <td>Up to 8,500 lbs (when properly equipped)</td>
+                </tr>
+            </table>
+        </div>
+        </section>
+    </div>
+    <div class="container table-container">
+        <section id="Ferrari">
+
+        <h2 class="mt-4">Ferrari F8 Specifications</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Make & Model</td>
+                    <td>Ferrari F8 Tributo</td>
+                </tr>
+                <tr>
+                    <td>Body Type</td>
+                    <td>Coupe</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>3.9-liter Twin-Turbocharged V8</td>
+                </tr>
+                <tr>
+                    <td>Power Output</td>
+                    <td>Approximately 710 horsepower</td>
+                </tr>
+                <tr>
+                    <td>Torque</td>
+                    <td>Approximately 568 lb-ft</td>
+                </tr>
+                <tr>
+                    <td>Transmission</td>
+                    <td>7-speed dual-clutch automatic</td>
+                </tr>
+                <tr>
+                    <td>Drive Type</td>
+                    <td>Rear-Wheel Drive (RWD)</td>
+                </tr>
+                <tr>
+                    <td>0-60 mph (0-97 km/h)</td>
+                    <td>Approximately 2.9 seconds</td>
+                </tr>
+                <tr>
+                    <td>Top Speed</td>
+                    <td>Over 211 mph (340 km/h)</td>
+                </tr>
+                <tr>
+                    <td>Fuel Efficiency (Combined)</td>
+                    <td>Approximately 18 mpg</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>
+                        <ul>
+                            <li>Length: Approximately 181 inches (4,611 mm)</li>
+                            <li>Width: Approximately 77.8 inches (1,979 mm)</li>
+                            <li>Height: Approximately 47.5 inches (1,213 mm)</li>
+                            <li>Wheelbase: Approximately 104.3 inches (2,649 mm)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interior Features</td>
+                    <td>
+                        <ul>
+                            <li>High-quality leather seats</li>
+                            <li>Alcantara-trimmed steering wheel</li>
+                            <li>Dual-zone automatic climate control</li>
+                            <li>Infotainment system with touchscreen display</li>
+                            <li>Apple CarPlay and Android Auto integration</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Safety Features</td>
+                    <td>
+                        <ul>
+                            <li>Advanced Airbag System</li>
+                            <li>Electronic Stability Control</li>
+                            <li>Carbon Ceramic Brake System</li>
+                            <li>Adaptive Front Lighting System</li>
+                            <li>Rearview Camera</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Features</td>
+                    <td>
+                        <ul>
+                            <li>Carbon fiber body elements</li>
+                            <li>Electric power steering</li>
+                            <li>Scuderia Ferrari Shields</li>
+                            <li>Rev Counter in Yellow</li>
+                            <li>Engine Start Button on Steering Wheel</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </section>
+    </div>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-start">
+                <a href="audi.html" type="button" class="btn btn-success ml-5">Last Page</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <a href="range.html" type="button" class="btn btn-success mr-5">Next Page</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 00970543214725</p>
+                    <p>Email: info@rentacardubai.com</p>
+                    <p>Address: DXB terminal 1, Dubai, UAE</p>
+                    <iframe
+                    width="350"
+                    height="250"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9033.20827632594!2d55.35297163129561!3d25.248737628835013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDXB%20Terminal%201!5e0!3m2!1sen!2suk!4v1627273526931!5m2!1sen!2suk">
+                </iframe>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <a href="index.html" class="d-block mb-2 footer_anchors">Home</a>
+                        <a href="About Us.html" class="d-block mb-2">About Us</a>
+                        <a href="index.html" class="d-block mb-2">Rates</a>
+                        <a href="audi.html" class="d-block mb-2">Cars</a>
+                        <a href="contact.html" class="d-block mb-2">Contact Us</a>
+                        <a href="privacy.html" class="d-block mb-2">Terms and Conditions</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100094974506950&mibextid=9R9pXO" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                                                <a href="mailto:dubaicarrent936@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/dubai_rent_a_Car84/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- Add more social icons here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2023 Rent a Car Dubai. All rights reserved.</p>
+
+                </div>
+                <a href="#" type="button" class="btn btn-success p-3 ml-auto "><i class="fa fa-arrow-up "></i></a>
+
+            </div>
+        </div>
+    </footer>
+  <!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script>
+            // Hide the preloader when the page has fully loaded
+            window.addEventListener('load', function() {
+                const preloaderContainer = document.querySelector('.preloader-container');
+                preloaderContainer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Show scrollbars after preloading
+            });
+        </script>
+</body>
+</html>
